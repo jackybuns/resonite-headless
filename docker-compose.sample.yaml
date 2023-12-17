@@ -9,8 +9,11 @@ services:
       STEAMBETA: headless
       STEAMBETAPASSWORD: CHANGEME
       STEAMLOGIN: "USER PASSWORD"
+      # Set additional command line parameters for the headless like
+      #CMD_OPTIONS: "-LoadAssembly ResoniteModLoader.dll"  
     volumes:
       - "./Config:/Config:ro"
       - "./Logs:/Logs"
+      - "./Data:/home/steam/resonite-headless"
       - "/etc/localtime:/etc/localtime:ro"
     restart: unless-stopped
