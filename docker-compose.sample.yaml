@@ -1,6 +1,7 @@
 version: "3.3"
 services:
   resonite:
+    build: .
     image: shadowpanther/resonite-headless:latest
     container_name: resonite-headless
     tty: true
